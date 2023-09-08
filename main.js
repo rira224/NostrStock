@@ -47,7 +47,7 @@ const searchPosts = async () => {
     {
         "kinds": [1],
         "limit": 100,
-        "#t":["illust"],
+        "#t":["sakestr"],
         "authors": [npub]
         // 作者の公開鍵
 	
@@ -245,10 +245,10 @@ const searchPosts = async () => {
 
       
 
-      //postContainerを一つの投稿表示欄illustContainerに追加
-      illustContainer.appendChild(postContainer);
+      //postContainerを一つの投稿表示欄resultContainerに追加
+      resultContainer.appendChild(postContainer);
       //境界線追加
-      illustContainer.appendChild(document.createElement("hr"));
+      resultContainer.appendChild(document.createElement("hr"));
     } catch (err) {
       console.error(err);
     }
