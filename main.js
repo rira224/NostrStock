@@ -17,10 +17,10 @@ const searchPosts = async () => {
     		break;
   		case "nsec":
 		  console.error("エラー: これは秘密鍵…　公開鍵はnpubで始まる方");
-          alert("わわ！これは秘密鍵じゃ！秘密にするのじゃ〜！！");
+          alert("これは秘密鍵です！");
   		default:
 		  console.error("エラー：これは…公開鍵じゃないね　");
-          alert("公開鍵じゃないな　……何じゃ？");
+          alert("公開鍵ではありません");
 	}
 
 
@@ -42,7 +42,7 @@ const searchPosts = async () => {
     }
 
   ]);
-  //kind1にフィルター（100イベント、illustタグつき、指定した公開鍵からの投稿）つけて購読
+  //kind1にフィルター（100イベント、sakestrタグつき、指定した公開鍵からの投稿）つけて購読
   const sub = relay.sub([
     {
         "kinds": [1],
@@ -57,8 +57,8 @@ const searchPosts = async () => {
   const profContainer = document.getElementById("profContainer");
   profContainer.innerHTML = ""; // コンテナをクリア
     
-  const illustContainer = document.getElementById("illustContainer");
-  illustContainer.innerHTML = ""; // コンテナをクリア
+  const resultContainer = document.getElementById("resultContainer");
+  resultContainer.innerHTML = ""; // コンテナをクリア
 
   // メッセージタイプごとにリスナーを設定できる
   
