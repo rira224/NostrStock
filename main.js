@@ -1,8 +1,7 @@
 const currUnixtime = () => Math.floor(new Date().getTime() / 1000);
 
-function changeColor(idname){
-  var obj = document.getElementById(idname);
-  obj.style.backgroundColor = '#CCEAFF';  //背景色の変更
+body {
+background:#CCEAFF;  //背景色の変更
 }
 
 const relayUrl = "wss://relay-jp.nostr.wirednet.jp";
